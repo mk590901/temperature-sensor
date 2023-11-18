@@ -1,0 +1,8 @@
+name: CloudServer
+entrypoint: cloud_task_server.toit
+triggers:
+    on_install: true
+pubsub:
+    subscriptions:
+    - "cloud:demo/ping"
+

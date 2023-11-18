@@ -1,0 +1,99 @@
+SERVER
+
+(base) michael_k@michaelk:~/toit_apps/cloud_sensor_dev$ toit run -d=nuc cloud_task_server2.toit
+2023-11-14T08:48:09.812735Z: <process initiated>
+******* START *******
+(09:48:34.177)<<start
+(09:48:36.314)>>24.70
+(09:48:38.789)<<start
+(09:48:39.709)<<start
+(09:48:39.752)>>cancel
+(09:48:44.939)<<start
+(09:48:47.045)>>23.80
+(09:48:50.149)<<start
+(09:48:52.243)>>23.40
+(09:48:59.895)<<start
+(09:48:59.935)<<start
+(09:48:59.963)>>cancel
+(09:49:03.416)<<start
+(09:49:05.513)>>23.70
+(09:49:06.429)<<start
+(09:49:08.542)>>26.70
+(09:49:11.349)<<exit
+******* FINAL *******
+2023-11-14T08:49:11.736876Z: <process terminated - exit code: 0>
+
+CLIENT
+
+(base) michael_k@michaelk:~/toit_apps/cloud_sensor_dev$ toit run -d=nuc cloud_task_client2.toit
+2023-11-14T08:48:33.311312Z: <process initiated>
+******* START *******
+(09:48:32.887)>>start
+(09:48:37.258)<<24.70
+(09:48:37.957)>>start
+(09:48:39.017)>>start
+(09:48:40.628)<<cancel
+(09:48:44.066)>>start
+(09:48:47.998)<<23.80
+(09:48:49.136)>>start
+(09:48:54.206)>>start
+(09:48:55.247)>>start
+(09:48:56.909)<<23.40
+(09:49:00.287)>>start
+(09:49:03.424)<<cancel
+(09:49:05.336)>>start
+(09:49:07.049)<<23.70
+(09:49:09.508)<<26.70
+(09:49:10.407)>>exit
+******* FINAL *******
+2023-11-14T08:49:15.575805Z: <process terminated - exit code: 0>
+(base) michael_k@michaelk:~/toit_apps/cloud_sensor_dev$ 
+===========================================================================
+(base) michael_k@michaelk:~/toit_apps/cloud_sensor_dev$ toit run -d=nuc cloud_task_server2.toit
+2023-11-14T10:03:14.617153Z: <process initiated>
+******* START *******
+(11:03:48.567)<<start
+(11:03:50.690)>>23.20
+(11:03:53.155)<<start
+(11:03:54.687)<<start
+(11:03:54.714)>>cancel
+(11:03:59.904)<<start
+(11:04:01.998)>>24.90
+(11:04:03.905)<<start
+(11:04:06.008)>>23.50
+(11:04:09.125)<<start
+(11:04:10.047)<<start
+(11:04:10.075)>>cancel
+(11:04:15.884)<<start
+(11:04:17.979)>>24.10
+(11:04:19.875)<<start
+(11:04:22.018)>>30.60
+(11:04:26.026)<<exit
+******* FINAL *******
+2023-11-14T10:04:26.394452Z: <process terminated - exit code: 0>
+===========================================================================
+(base) michael_k@michaelk:~/toit_apps/cloud_sensor_dev$ toit run -d=dell cloud_task_
+client2.toit
+2023-11-14T10:03:46.564298Z: <process initiated>
+******* START *******
+(11:03:46.469)>>start
+(11:03:51.550)>>start
+(11:03:52.256)<<23.20
+(11:03:52.630)>>start
+(11:03:55.622)<<cancel
+(11:03:57.670)>>start
+(11:04:02.739)>>start
+(11:04:03.902)<<24.90
+(11:04:06.971)<<23.50
+(11:04:07.800)>>start
+(11:04:08.859)>>start
+(11:04:10.972)<<cancel
+(11:04:13.909)>>start
+(11:04:18.951)<<24.10
+(11:04:18.972)>>start
+(11:04:22.952)<<30.60
+(11:04:24.030)>>exit
+******* FINAL *******
+2023-11-14T10:04:29.199641Z: <process terminated - exit code: 0>
+(base) michael_k@michaelk:~/toit_apps/cloud_sensor_dev$ 
+===========================================================================
