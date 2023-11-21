@@ -1,4 +1,4 @@
-# Temperature Sensor Simulator
+# TOIT Temperature Sensor Simulator
 
 ## Introduction
 
@@ -14,10 +14,21 @@ The client is a separate application that sends commands to the server to start 
 
 ## Run apps
 
-The client and server run separately. Everyone is on their own terminal. The server starts first, then the client. There are 3 ways to do it:
-1. On the same chip, using cloud topics. Strange as it may seem, toitware has implemented the ability to run several independent applications in parallel on one chip.
-2. On different chips. You should simply specify the names of the ESP32 chips when starting the server and client. In this case, the server is launched on the nuc controller, the client - on the mini controller.
-3. If you slightly change the application by changing the topics in files A, B, and C, you will get two applications that exchange data inside one chip without access to the Internet.
+The client and server run separately. Each app launches from their own terminal window. The server starts first, then the client as shown in movie. There are 3 ways to do it:
+1. On the same chip, using cloud topics. Strange as it may seem, toitware has implemented the ability to run several independent applications in parallel on one chip. In this case, both the server and the client are running on a controller called **nuc**:
+
+$ toit run -d=nuc cloud_task_server.toit
+$ toit run -d=nuc cloud_task_client.toit
+
+2. On different chips. You should simply specify the names of the ESP32 chips when starting the server and client. In this case, the server is launched on the **nuc** controller, the client - on the **mini** controller.
+
+$ toit run -d=nuc cloud_task_server.toit
+$ toit run -d=mini cloud_task_client.toit
+
+4. If you slightly change the application by replacing the topics in files **cloud_task_server.toit**, **cloud_task_client**, and **outer_pubsub.toit**: "cloud:demo/ping" to "device:demo/ping" and "cloud:demo/pоng" to "device:demo/pоng", you'll get server and client that exchange data inside one chip without  data messaging via the internet:
+
+$ toit run -d=nuc cloud_task_server.toit
+$ toit run -d=nuc cloud_task_client.toit
 
 # Movie
 
