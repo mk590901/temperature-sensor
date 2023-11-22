@@ -6,7 +6,7 @@ The project consists of two applications: server and client apps.
 
 ## Server
 
-The server is a temperature sensor emulator. It's described by a state machine that responds to event *start*. The measurement process takes two seconds after which the sensor produces a random value in the range from 24°C to 42°C. The values are generated in a certain predefined order, giving the appearance of a gradual temperature change. If event *start* occurs during a measure, the the measurement is stopped and sensor returns the value *cancel*. The server also handles the *exit* event, closing the task that is processing the input message stream. Pay attention to the **Task** class (task.toit) implemented *thread*.
+The server is a temperature sensor emulator. It's described by a state machine that responds to event *start*. The measurement process takes two seconds after which the sensor produces a random value in the range from 24°C to 42°C. The values are generated in a certain predefined order, giving the appearance of a gradual temperature change. If event *start* occurs during a measure, the the measurement is stopped and sensor returns the value *cancel*. The server also handles the *exit* event, closing the task that is processing the input message stream. Pay attention to the **Task** class (task.toit) simulated *thread*.
 
 ## Client
 
